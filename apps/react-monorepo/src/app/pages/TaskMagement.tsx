@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { DataGrid, ColumnRef, Row } from '@modules/shared/dataGrid';
-import { AssigneeCell, User, LinkCell, AssigneeEditor, CustomDateCell } from '@modules/shared/dataGridExtensions/cells';
+import { AssigneeCell, LinkCell, AssigneeEditor, } from '@modules/shared/dataGridExtensions/cells';
 import { initialMockTasks } from '@modules/shared/data/data';
 import { Task, TaskPriority, TaskStatus } from '@modules/shared/data/type';
-
-
+import { useGetUser } from '@services/useGetUser';
 
 // Define the Task interface
 
 export default function TaskManagement() {
   // Initialize state with the data
   const [tasks, setTasks] = useState<Task[]>(initialMockTasks);
+  const {userList} = useGetUser()
 
   // Handle cell value changes
   const handleCellValueChange = (taskId: number, field: string, value: any) => {
@@ -216,14 +216,6 @@ export default function TaskManagement() {
           </div>
         );
       },
-      // Use our custom date cell for editing
-      // editableCell: ({ value, onSave, onCancel }) => (
-      //   <CustomDateCell
-      //     value={value}
-      //     onSave={onSave}
-      //     onCancel={onCancel}
-      //   />
-      // )
     },
     {
       field: 'assignee',
@@ -237,7 +229,7 @@ export default function TaskManagement() {
       editableCell: ({ value, onSave, onCancel }) => (
         <AssigneeEditor
           value={value || []}
-          availableUsers={[]} //TODO Backend API call
+          availableUsers={userList || []}
           onSave={onSave}
           onCancel={onCancel}
         />

@@ -1,6 +1,14 @@
-import { User } from '../types/user';
+import type { User } from '../types/user';
 
-const API_URL = 'http://localhost:3000/api';
+/**
+ * Get the base URL for API requests from environment variables
+ * Falls back to localhost if not defined
+ */
+const getApiBaseUrl = (): string => {
+  return import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+};
+
+const API_URL = `${getApiBaseUrl()}/api`;
 
 export const fetchUsers = async (): Promise<User[]> => {
   try {

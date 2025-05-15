@@ -22,7 +22,8 @@ export default defineConfig(() => ({
   resolve: {
     alias: {
       '@modules': resolve(__dirname, 'src/app/modules'),
-      '@pages': resolve(__dirname, 'src/app/pages')
+      '@pages': resolve(__dirname, 'src/app/pages'),
+      '@services': resolve(__dirname, 'src/app/services'),
     }
   },
   build: {

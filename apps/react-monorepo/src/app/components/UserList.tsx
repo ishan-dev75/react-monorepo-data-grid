@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { User } from '../types/user';
+import type { User } from '../types/user';
 import { fetchUsers } from '../services/api';
 
 // Helper function to get initials from name
@@ -49,9 +49,9 @@ export function UserList() {
         {users.map(user => (
           <div key={user.id} className="bg-white rounded-lg shadow p-4 flex items-center">
             {user.imgURL ? (
-              <img 
-                src={user.imgURL} 
-                alt={user.name} 
+              <img
+                src={user.imgURL}
+                alt={user.name}
                 className="w-12 h-12 rounded-full mr-4"
               />
             ) : (

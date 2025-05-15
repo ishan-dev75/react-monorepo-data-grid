@@ -20,7 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@modules/*": ["apps/react-monorepo/src/app/modules/*"],
-      "@pages/*": ["apps/react-monorepo/src/app/pages/*"]
+      "@pages/*": ["apps/react-monorepo/src/app/pages/*"],
+      "@services/*": ["apps/react-monorepo/src/app/services/*"]
     }
   }
 }
