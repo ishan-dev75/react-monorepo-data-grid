@@ -19,7 +19,8 @@
     "customConditions": ["development"],
     "baseUrl": ".",
     "paths": {
-      "@modules/*": ["apps/react-monorepo/src/app/modules/*"]
+      "@modules/*": ["apps/react-monorepo/src/app/modules/*"],
+      "@pages/*": ["apps/react-monorepo/src/app/pages/*"]
     }
   }
 }

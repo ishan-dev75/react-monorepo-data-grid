@@ -1,38 +1,29 @@
-import { Route, Routes, Link } from 'react-router-dom';
-import { UserList } from './components/UserList';
+import TaskManagement from '@pages/TaskMagement';
+import UserManagement from '@pages/UserManagement';
+import { Route, Routes, Link, Navigate } from 'react-router-dom';
 
 export function App() {
   return (
-    <div className="container mx-auto p-4">
-      <header className="mb-6">
-        <h1 className="text-3xl font-bold">React Monorepo Demo</h1>
-      </header>
-
+    <div className="mx-auto p-4">
       <div role="navigation" className="mb-6">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/" className="text-blue-500 hover:text-blue-700">Home</Link>
+            <Link to="/task-management-demo" className="text-blue-500 hover:text-blue-700">
+              Task Management
+            </Link>
           </li>
           <li>
-            <Link to="/users" className="text-blue-500 hover:text-blue-700">Users</Link>
+            <Link to="/datagrid-demo" className="text-blue-500 hover:text-blue-700">
+              User Management
+            </Link>
           </li>
         </ul>
       </div>
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="p-4 bg-gray-100 rounded">
-              <h2 className="text-xl font-semibold mb-2">Welcome to the React Monorepo Demo</h2>
-              <p className="mb-4">This application demonstrates fetching data from a backend API.</p>
-              <Link to="/users" className="text-blue-500 hover:text-blue-700">
-                View Users List
-              </Link>
-            </div>
-          }
-        />
-        <Route path="/users" element={<UserList />} />
+       <Route path="/" element={<Navigate to="/task-management-demo" replace />} />
+        <Route path="/task-management-demo" element={<TaskManagement />} />
+        <Route path="/datagrid-demo" element={<UserManagement />} />
       </Routes>
     </div>
   );
