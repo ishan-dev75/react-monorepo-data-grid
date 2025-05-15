@@ -1,4 +1,4 @@
-import { User } from "../types/user";
+import { User } from "./type";
 
 export const users: User[] = [
     { id: 1, name: 'Alex Johnson', imgURL: 'https://randomuser.me/api/portraits/men/32.jpg' },

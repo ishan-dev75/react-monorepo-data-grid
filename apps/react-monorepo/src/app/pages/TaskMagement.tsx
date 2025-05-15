@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import { DataGrid, ColumnRef, Row } from '@modules/shared/dataGrid';
 import { AssigneeCell, User, LinkCell, AssigneeEditor, CustomDateCell } from '@modules/shared/dataGridExtensions/cells';

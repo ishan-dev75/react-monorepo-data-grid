@@ -1,4 +1,3 @@
-import React from 'react';
 import withEditableCell from './withEditableCell';
 import { TextInput } from './inputs';
 
