@@ -1,4 +1,4 @@
-import TaskManagement from '@pages/TaskMagement';
+import TaskManagement from '@pages/TaskManagement';
 import UserManagement from '@pages/UserManagement';
 import { Route, Routes, Link, Navigate, NavLink } from 'react-router-dom';
 
