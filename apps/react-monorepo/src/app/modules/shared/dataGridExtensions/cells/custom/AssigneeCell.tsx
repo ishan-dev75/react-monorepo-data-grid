@@ -1,11 +1,6 @@
+import { User } from '@modules/shared/data/type';
 import { Tooltip } from '@modules/shared/tooltip';
 import React from 'react';
-
-export interface User {
-  id: string | number;
-  name: string;
-  imgURL?: string;
-}
 
 interface AssigneeCellProps {
   users: User[];
