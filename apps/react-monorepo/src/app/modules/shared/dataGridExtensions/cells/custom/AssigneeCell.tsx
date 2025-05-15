@@ -78,7 +78,7 @@ const AssigneeCell: React.FC<AssigneeCellProps> = ({
             <span>{initials}</span>
           )}
         </div>
-        <span className="text-sm font-medium text-white">{user.name}</span>
+        <span className="text-sm font-medium text-black dark:text-white">{user.name}</span>
       </div>
     );
   };

@@ -14,21 +14,21 @@ const userAssigneeMockData: User[] = [
 // Define initial rows data
 export const userMockData = [
     // Random order of different ages and names with assignees
-    { id: 8, lastName: 'Wayne', firstName: 'Bruce', age: 31, birthDate: '1980-02-19', fullName: 'Bruce Wayne', rating: 5, assignee: [userAssigneeMockData[0], userAssigneeMockData[1], userAssigneeMockData[2]] },
-    { id: 3, lastName: 'Allen', firstName: 'Barry', age: 11, birthDate: '1995-01-20', fullName: 'Barry Allen', rating: 4, assignee: [userAssigneeMockData[3], userAssigneeMockData[4]] },
+    { id: 8, lastName: 'Wayne', firstName: 'Bruce', age: 31, birthDate: '1980-02-19', fullName: 'Bruce Wayne', rating: 5, assignee: [userAssigneeMockData[0]] },
+    { id: 3, lastName: 'Allen', firstName: 'Barry', age: 11, birthDate: '1995-01-20', fullName: 'Barry Allen', rating: 4, assignee: [userAssigneeMockData[3],] },
     { id: 11, lastName: 'Clifford', firstName: 'Ferrara', age: 44, birthDate: '1978-04-19', fullName: 'Ferrara Clifford', rating: 3, assignee: [userAssigneeMockData[5]] },
-    { id: 5, lastName: 'Kent', firstName: 'Clark', age: 14, birthDate: '1990-06-18', fullName: 'Clark Kent', rating: 5, assignee: [userAssigneeMockData[0], userAssigneeMockData[2], userAssigneeMockData[4], userAssigneeMockData[6]] },
+    { id: 5, lastName: 'Kent', firstName: 'Clark', age: 14, birthDate: '1990-06-18', fullName: 'Clark Kent', rating: 5, assignee: [userAssigneeMockData[0]] },
     { id: 14, lastName: 'Targaryen', firstName: 'Daenerys', age: null, birthDate: '1992-05-12', fullName: 'Daenerys Targaryen', rating: 4, assignee: [] },
-    { id: 9, lastName: 'Frances', firstName: 'Rossini', age: 36, birthDate: '1986-07-12', fullName: 'Frances Rossini', rating: 2, assignee: [userAssigneeMockData[1], userAssigneeMockData[3]] },
+    { id: 9, lastName: 'Frances', firstName: 'Rossini', age: 36, birthDate: '1986-07-12', fullName: 'Frances Rossini', rating: 2, assignee: [userAssigneeMockData[1]] },
     { id: 7, lastName: 'Lannister', firstName: 'Jaime', age: 31, birthDate: '1980-06-23', fullName: 'Jaime Lannister', rating: 3, assignee: [userAssigneeMockData[7]] },
-    { id: 4, lastName: 'Snow', firstName: 'Jon', age: 14, birthDate: '1990-01-15', fullName: 'Jon Snow', rating: 4, assignee: [userAssigneeMockData[0], userAssigneeMockData[1], userAssigneeMockData[2], userAssigneeMockData[3], userAssigneeMockData[4]] },
+    { id: 4, lastName: 'Snow', firstName: 'Jon', age: 14, birthDate: '1990-01-15', fullName: 'Jon Snow', rating: 4, assignee: [userAssigneeMockData[0]] },
     { id: 15, lastName: 'Melisandre', firstName: null, age: 150, birthDate: '1870-01-01', fullName: 'Melisandre', rating: 5, assignee: [userAssigneeMockData[6]] },
-    { id: 2, lastName: 'Parker', firstName: 'Peter', age: 11, birthDate: '1995-05-15', fullName: 'Peter Parker', rating: 4, assignee: [userAssigneeMockData[0], userAssigneeMockData[5]] },
+    { id: 2, lastName: 'Parker', firstName: 'Peter', age: 11, birthDate: '1995-05-15', fullName: 'Peter Parker', rating: 4, assignee: [userAssigneeMockData[0]] },
     { id: 13, lastName: 'Roxie', firstName: 'Harvey', age: 65, birthDate: '1957-12-25', fullName: 'Roxie Harvey', rating: 1, assignee: [] },
-    { id: 10, lastName: 'Rogers', firstName: 'Steve', age: 36, birthDate: '1986-07-04', fullName: 'Steve Rogers', rating: 5, assignee: [userAssigneeMockData[2], userAssigneeMockData[7]] },
+    { id: 10, lastName: 'Rogers', firstName: 'Steve', age: 36, birthDate: '1986-07-04', fullName: 'Steve Rogers', rating: 5, assignee: [userAssigneeMockData[2]] },
     { id: 1, lastName: 'Stark', firstName: 'Arya', age: 11, birthDate: '1995-03-10', fullName: 'Arya Stark', rating: 4, assignee: [userAssigneeMockData[1]] },
-    { id: 12, lastName: 'Stark', firstName: 'Tony', age: 44, birthDate: '1978-05-29', fullName: 'Tony Stark', rating: 5, assignee: [userAssigneeMockData[3], userAssigneeMockData[4], userAssigneeMockData[5]] },
-    { id: 6, lastName: 'Lannister', firstName: 'Cersei', age: 31, birthDate: '1980-06-23', fullName: 'Cersei Lannister', rating: 2, assignee: [userAssigneeMockData[0], userAssigneeMockData[2]] },
+    { id: 12, lastName: 'Stark', firstName: 'Tony', age: 44, birthDate: '1978-05-29', fullName: 'Tony Stark', rating: 5, assignee: [userAssigneeMockData[3]] },
+    { id: 6, lastName: 'Lannister', firstName: 'Cersei', age: 31, birthDate: '1980-06-23', fullName: 'Cersei Lannister', rating: 2, assignee: [userAssigneeMockData[0]] },
 ];
 
 

@@ -1,11 +1,13 @@
 import { userMockData } from '@modules/shared/data/data';
 import { ColumnRef, DataGrid, Row } from '@modules/shared/dataGrid';
-import { AssigneeCell, StarRatingCell, StarRatingEditor } from '@modules/shared/dataGridExtensions';
+import { AssigneeCell, AssigneeEditor, StarRatingCell, StarRatingEditor } from '@modules/shared/dataGridExtensions';
+import { useGetUser } from '@services/useGetUser';
 import { useState } from 'react';
 
 export default function UserManagement() {
   // Initialize state with the data
   const [demoRows, setDemoRows] = useState<Row[]>(userMockData);
+  const {userList} = useGetUser()
 
   // Handle cell value changes
   const handleCellValueChange = (rowId: any, field: string, value: any) => {
@@ -160,7 +162,17 @@ export default function UserManagement() {
         const bLength = b.assignee?.length || 0;
 
         return isAscending ? aLength - bLength : bLength - aLength;
-      }
+      },
+      editable: true, // Make this column editable
+      editableCell: ({ value, onSave, onCancel }) => (
+        <AssigneeEditor
+          singleSelect={true}
+          value={value || []}
+          availableUsers={userList || []}
+          onSave={onSave}
+          onCancel={onCancel}
+        />
+      )
     },
     {
       field: 'birthDate',
@@ -168,16 +180,6 @@ export default function UserManagement() {
       type: 'date',
       align: 'right',
       editable: true, // Make this column editable
-      // Use our custom date cell for editing
-      // editableCell: ({ value, onSave, onCancel }) => (
-      //   <CustomDateCell
-      //     value={value}
-      //     onSave={onSave}
-      //     onCancel={onCancel}
-      //     align="right"
-      //   />
-      // ),
-      // Validate that the date is not in the future
       valueValidator: (value) => {
         if (!value) return true;
         const date = new Date(value);
